@@ -5,8 +5,12 @@ $claude = Join-Path $env:USERPROFILE '.claude'
 # Claude names project folders by the path with every non-alphanumeric char turned into '-'
 $encHome = $env:USERPROFILE -replace '[^A-Za-z0-9]', '-'
 
+# brain-local.txt (one file name per line, not synced): files this machine keeps to itself
+$localFile = Join-Path $claude 'brain-local.txt'
+$localOnly = @(if (Test-Path $localFile) { Get-Content $localFile | Where-Object { $_.Trim() } | ForEach-Object { $_.Trim() } })
+
 function Mirror($src, $dst) {
-    robocopy $src $dst /MIR /XD .git __pycache__ /XF *KEY*.txt .env /NFL /NDL /NJH /NJS /NP | Out-Null
+    robocopy $src $dst /MIR /XD .git __pycache__ /XF *KEY*.txt .env @localOnly /NFL /NDL /NJH /NJS /NP | Out-Null
     if ($LASTEXITCODE -ge 8) { throw "robocopy failed: $src" }
 }
 

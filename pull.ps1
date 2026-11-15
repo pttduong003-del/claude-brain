@@ -9,8 +9,13 @@ git pull
 if ($LASTEXITCODE -ne 0) { throw 'git pull failed' }
 
 # Copy only adds/overwrites; files that exist only on this machine are kept.
+# brain-local.txt (one file name per line, not synced): files this machine keeps to itself
+$localFile = Join-Path $claude 'brain-local.txt'
+$xf = @(if (Test-Path $localFile) { Get-Content $localFile | Where-Object { $_.Trim() } | ForEach-Object { $_.Trim() } })
+if ($xf) { $xf = @('/XF') + $xf }
+
 function Merge($src, $dst) {
-    robocopy $src $dst /E /NFL /NDL /NJH /NJS /NP | Out-Null
+    robocopy $src $dst /E @xf /NFL /NDL /NJH /NJS /NP | Out-Null
     if ($LASTEXITCODE -ge 8) { throw "robocopy failed: $src" }
 }
 

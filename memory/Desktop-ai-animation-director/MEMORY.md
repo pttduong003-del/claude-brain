@@ -1,4 +1,4 @@
-- [Detective protagonist](detective-protagonist.md) — keep noir detective lead in JP videos; localize side cast/sets only
+- [Protagonist](detective-protagonist.md) — main character rule for videos; differs per device, read the file
 - [Scene style approved](scene-style-approved.md) — bubbles + pointer arrows, no clutter lines, manpu off the face
 - [Ask before render](ask-before-render.md) — never start make_video.py render without user's go-ahead
 - [Narrator voice](narrator-voice-masane.md) — JP narrator = ElevenLabs v3 Akio shima; masane clone reads flat on AI33

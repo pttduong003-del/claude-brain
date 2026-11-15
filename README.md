@@ -19,3 +19,8 @@ powershell -ExecutionPolicy Bypass -File $env:USERPROFILE\claude-brain\pull.ps1
 - API key (AI33_API_KEY, AI33_KEY.txt) KHÔNG nằm trong repo. Mỗi máy tự đặt.
 - Memory gắn với đường dẫn project tính từ thư mục user (vd `Desktop\ai-animation-director`). Máy khác phải để project ở cùng vị trí tương đối đó.
 - pull.ps1 ghi đè settings.json của máy nhận.
+
+## File riêng từng máy
+
+Tạo `%USERPROFILE%\.claude\brain-local.txt`, mỗi dòng một tên file (vd `detective-protagonist.md`).
+File có tên trong danh sách sẽ không bị pull ghi đè và không bị push đẩy lên. Mỗi máy giữ bản riêng.
