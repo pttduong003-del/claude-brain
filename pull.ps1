@@ -22,3 +22,4 @@ Get-ChildItem (Join-Path $repo 'memory') -Directory | ForEach-Object {
     Merge $_.FullName (Join-Path $claude "projects\$encHome-$($_.Name)\memory")
 }
 Write-Host 'Brain updated. Restart Claude to load it.'
+exit 0

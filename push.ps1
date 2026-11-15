@@ -32,3 +32,4 @@ if ($LASTEXITCODE -ne 0) { throw 'git pull --rebase failed: resolve conflict, th
 git push
 if ($LASTEXITCODE -ne 0) { throw 'git push failed' }
 Write-Host 'Brain pushed.'
+exit 0
