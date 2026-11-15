@@ -1,0 +1,8 @@
+- [QA runner and baselines](qa-runner-baselines.md) — temp/phase4/run-qa.ps1, UTF-16 outputs, phase-4 baseline folder, don't edit during QA
+- [No git restore on uncommitted files](no-git-restore-uncommitted.md) — stash/copy to temp instead; never delete baselines
+- [G-Labs lite upscales 2K](glabs-lite-upscale.md) — nano_banana_2_lite + 2K is the default; no need to probe
+- [Life layers plan (A)](life-layers-plan.md) — approved: light flicker, props enter on word, STATIC_SHOT; prototype findings
+- [Antigravity slash = workflows](antigravity-slash-workflows.md) — /history-video-producer lives in .agents/workflows/, not the skill
+- [Documentary mode direction](documentary-mode-direction.md) — target = flat vector motion-graphics doc like the bilibili reference; boy kept as character; 30 s sample first
+- [Test videos ~1 minute](test-video-1-minute.md) — trim audio to ~60 s for test/baseline renders; full length only when asked
+- [3D pipeline: no images](3d-pipeline-no-images.md) — /history-video-producer is 3-step 3D; no G-Labs/image prompts/picture approval

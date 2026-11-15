@@ -1,0 +1,3 @@
+- [Fixes must generalize](feedback-fixes-must-generalize.md) — every visual fix also becomes a render check + doc rule for future videos
+- [Agent ignores warnings](feedback-agent-ignores-warnings.md) — new rules must be lint errors that block preview too
+- [Reports describe plan, not frames](feedback-reports-describe-plan-not-frames.md) — verify batch reports against frames + output/acting.json

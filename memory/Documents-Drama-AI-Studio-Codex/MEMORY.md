@@ -1,0 +1,2 @@
+- [Story Bible logic gate](final-logic-gate.md) — chống lỗi logic kịch bản bằng cách siết kiểm tra Story Bible ở bước phân tích (chặn từ gốc, không viết lại toàn văn)
+- [DeepSeek-only](deepseek-only.md) — đã bỏ hoàn toàn OpenAI; DeepSeek lo viết + kiểm duyệt cuối + vá lỗi (chỉ cần 1 DeepSeek key)
