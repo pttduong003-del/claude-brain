@@ -20,6 +20,13 @@ powershell -ExecutionPolicy Bypass -File $env:USERPROFILE\claude-brain\pull.ps1
 - Memory gắn với đường dẫn project tính từ thư mục user (vd `Desktop\ai-animation-director`). Máy khác phải để project ở cùng vị trí tương đối đó.
 - pull.ps1 ghi đè settings.json của máy nhận.
 
+## Máy không có Claude Code (dùng Antigravity)
+
+```powershell
+powershell -ExecutionPolicy Bypass -File $env:USERPROFILE\claude-brain\pull-antigravity.ps1
+```
+Memory được ghi vào một khối trong `~/.gemini/GEMINI.md` (global rules); phần bạn tự viết ngoài khối được giữ nguyên. Skill được chép vào `~/.gemini/config/skills` và `~/.gemini/antigravity/skills`.
+
 ## File riêng từng máy
 
 Tạo `%USERPROFILE%\.claude\brain-local.txt`, mỗi dòng một tên file (vd `detective-protagonist.md`).
